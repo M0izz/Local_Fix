@@ -1,0 +1,34 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      // Assuming admins use email/password auth and citizens use anonymous auth
+      // In a real app, you would use custom claims or an 'admins' collection
+      return request.auth.token.firebase.sign_in_provider == 'password';
+    }
+
+    match /issues/{issueId} {
+      // Anyone can read issues (to populate the map)
+      allow read: if true;
+      
+      // Any authenticated user (including anonymous) can create a new issue
+      // We enforce that new issues start as 'reported'
+      allow create: if isAuthenticated() 
+                    && request.resource.data.status == 'reported'
+                    && request.resource.data.keys().hasAll(['title', 'category', 'location']);
+                    
+      // Only admins can update issues, specifically for resolving them
+      // Or users could update their own issue (not implemented here for simplicity)
+      allow update: if isAdmin();
+      
+      // Deletes not allowed in MVP
+      allow delete: if false;
+    }
+  }
+}
