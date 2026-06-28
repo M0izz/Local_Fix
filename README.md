@@ -1,5 +1,7 @@
 # Local Fix
 
+**Live Demo:** [https://community-hero-f1afa.web.app](https://community-hero-f1afa.web.app)
+
 ## About The Project
 
 Local Fix is an AI-powered civic engagement platform designed to empower residents to report, track, and collaborate on local issues in their neighborhoods. The application serves as a digital bridge between the community and local authorities, transforming how neighborhoods handle infrastructure repairs, community safety, and local initiatives.
