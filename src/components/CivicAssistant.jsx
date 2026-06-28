@@ -37,7 +37,7 @@ function CivicAssistant() {
     try {
       const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
       
-      const systemPrompt = `You are LocalAI, a helpful and predictive civic assistant for the Community Helper app. 
+      const systemPrompt = `You are LocalAI, a helpful and predictive civic assistant for the Local Fix app. 
         Your goal is to help citizens understand their community data. Keep answers brief (1-3 sentences) and encouraging. 
         If asked for predictive insights, give a plausible forecast based on urban trends (e.g. "Based on recent weather, expect an increase in pothole reports next month. Pothole reports usually jump 15% after heavy rains.").
         User's message: ${userMessage}`;

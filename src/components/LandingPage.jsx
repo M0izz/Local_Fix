@@ -240,7 +240,7 @@ function LandingPage() {
         }}
       >
         <div style={{ fontSize: '1rem', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
-          Community Helper
+          Local Fix
         </div>
         <Link 
           to="/app" 
@@ -426,7 +426,7 @@ function LandingPage() {
         <div style={{ position: 'absolute', inset: 0, zIndex: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.25, pointerEvents: 'none' }}>
           
           <CircularText 
-            text="COMMUNITY HELPER • COMMUNITY HERO • EMPOWER YOUR CITY • "
+            text="LOCAL FIX • COMMUNITY HERO • EMPOWER YOUR CITY • "
             radius={450} fontSize={16} color="#ffffff" duration={100} direction={1} 
           />
           <CircularText 
@@ -442,7 +442,7 @@ function LandingPage() {
             radius={180} fontSize={12} color="#ffffff" duration={40} direction={-1} 
           />
           <CircularText 
-            text="COMMUNITY HELPER • V1.0.0 • ACTIVE • "
+            text="LOCAL FIX • V1.0.0 • ACTIVE • "
             radius={90} fontSize={12} color="#ffffff" duration={30} direction={1} 
           />
 
@@ -485,7 +485,7 @@ function LandingPage() {
 
       {/* Minimal Footer */}
       <footer style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '3rem 4rem', display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#666' }}>
-        <div>&copy; {new Date().getFullYear()} Community Helper Platform.</div>
+        <div>&copy; {new Date().getFullYear()} Local Fix Platform.</div>
         <div>Crafted for the Future.</div>
       </footer>
     </div>

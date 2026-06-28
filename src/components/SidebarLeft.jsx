@@ -33,9 +33,9 @@ function SidebarLeft({ user }) {
   return (
     <aside className="sidebar-left glass-panel animate-fade-in" style={{ animationDelay: '0.1s' }}>
       <NavLink to="/" className="logo">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.25rem', fontWeight: 'bold' }}>
-          <Shield className="text-primary" size={28} />
-          <span>Community Helper</span>
+        <div className="flex items-center space-x-3 text-white cursor-pointer" onClick={() => navigate('/app')}>
+          <Menu className="h-6 w-6 text-yellow-500" />
+          <span>Local Fix</span>
         </div>
       </NavLink>
 

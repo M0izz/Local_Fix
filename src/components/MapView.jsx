@@ -91,9 +91,10 @@ function MapView({ user }) {
     if (mapRef.current) {
       try {
         const canvas = await html2canvas(mapRef.current, { useCORS: true });
+        const url = canvas.toDataURL('image/png');
         const link = document.createElement('a');
-        link.download = `community-helper-map-${Date.now()}.png`;
-        link.href = canvas.toDataURL();
+        link.download = `localfix-map-${Date.now()}.png`;
+        link.href = url;
         link.click();
       } catch (err) {
         console.error("Failed to capture screenshot:", err);
